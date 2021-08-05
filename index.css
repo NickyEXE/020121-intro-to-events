@@ -23,11 +23,15 @@ input[type=submit]{
   border-radius: 40%;
 }
 body {
-  font-size: 81px;
+  font-size: 20px;
   padding: 25px;
 }
 h1 {
   font-size: 48px;
+}
+
+li {
+  font-size: 81px;
 }
 .nav-button {
   background: #007eff;
