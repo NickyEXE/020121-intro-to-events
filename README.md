@@ -34,7 +34,6 @@ https://www.w3schools.com/jsref/dom_obj_event.asp
 As a user I want...
 
 * to alert "HELLO!" when I click the button
-* to hear a sound when I scroll (see `audio.js`, especially `makeSound()`)
 * anything I click on should have an emoji added to its innerText
 * to hover over any li and have its background color change to pink
 * to alert "YUM" when I click a taco
