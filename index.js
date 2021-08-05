@@ -11,11 +11,16 @@ document.querySelector('form').addEventListener("submit", handleSubmit)
 
 document.getElementById("taco").addEventListener("click", function(){addEmoji("🌮")})
 
+emojisContainer.addEventListener("click", () => console.log("clicked"))
+
 function addEmoji(emoji){
-  emojisContainer.innerHTML += `<li>${emoji}</li>`
+  const emojiButton = document.createElement("li")
+  emojiButton.innerText = emoji
+  emojisContainer.appendChild(emojiButton)
 }
 
 document.querySelector("li").addEventListener("click", function(e){
+  e.stopPropagation()
   e.target.style.backgroundColor = "yellow"
 })
 
