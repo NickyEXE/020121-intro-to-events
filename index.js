@@ -1,24 +1,19 @@
-console.log("hello world")
+const tacoButton = document.querySelector("#taco")
+const emojisContainer = document.getElementById("blobs")
+const emojiForm = document.getElementById("emoji-form")
+const commentForm = document.getElementById("comment-form")
+const comments = document.getElementById("comments")
 
+const initialEmojis = ["🍓", "🍕", "🥔", "😋", "🚽", "💪"]
+initialEmojis.forEach(addEmoji)
 
-// function hello(e){
-//   console.log(e.target)
-// }
+document.querySelector('form').addEventListener("submit", handleSubmit)
 
-// find the element you want to add the event listener to
+document.getElementById("taco").addEventListener("click", function(){addEmoji("🌮")})
 
-const header = document.querySelector("h1")
-console.log("header:", header)
-
-// add the event listener
-// pass in the type of event as a string as the first argument
-// and a callback function describing what you want it to do as a second argument
-// document.addEventListener("click", hello)
-
-
-// document.addEventListener("click", function(e){
-//   e.target.innerText = "🌮"
-// })
+function addEmoji(emoji){
+  emojisContainer.innerHTML += `<li>${emoji}</li>`
+}
 
 document.querySelector("li").addEventListener("click", function(e){
   e.target.style.backgroundColor = "yellow"
@@ -27,13 +22,5 @@ document.querySelector("li").addEventListener("click", function(e){
 function handleSubmit(e){
   e.preventDefault()
   addEmoji(e.target.emoji.value)
+  e.target.reset()
 }
-
-function addEmoji(emoji){
-  // THIS BREAKS THE CODE FROM LINE 24 AFTER IT'S INVOKED
-  document.querySelector("ul").innerHTML += `<li>${emoji}</li>`
-}
-
-document.querySelector('form').addEventListener("submit", handleSubmit)
-
-document.getElementById("taco").addEventListener("click", function(){addEmoji("🌮")})

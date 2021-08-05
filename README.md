@@ -19,6 +19,17 @@
 
 https://www.w3schools.com/jsref/dom_obj_event.asp
 
+# Key Questions: Lecture 2!
+* What will happen if I += the innerHTML of an element with children that have event handlers?
+* What is event bubbling and why is it important to know about?
+  * https://javascript.info/bubbling-and-capturing
+  * https://codepen.io/telegram/pen/maJxVV
+  * What does event.stopPropagation() do and why should I avoid using it?
+* How do we add event listeners to a set of items that may change?
+  * Event Delegation
+  * Closures
+* What's the dataset?
+
 # Silly Deliverables
 As a user I want...
 
@@ -26,5 +37,9 @@ As a user I want...
 * to hear a sound when I scroll (see `audio.js`, especially `makeSound()`)
 * anything I click on should have an emoji added to its innerText
 * to hover over any li and have its background color change to pink
+* to alert "YUM" when I click a taco
+* to make my H1 editable when double clicked
+* make the comment form render comments out to the comments list, along with how many times that comment has been clicked (tracking that number with an event listener). ie: `<li>[NUMBER OF TIMES CLICKED HERE]: [COMMENT HERE]</li>`
+
 
 ### Nicky stole this lecture from Graham Troyer-Joy and Eric Kim
